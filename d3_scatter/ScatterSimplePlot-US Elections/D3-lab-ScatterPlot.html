@@ -1,0 +1,139 @@
+<!-- Code from d3-graph-gallery.com -->
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+
+<script>
+
+// set the dimensions and margins of the graph
+			  
+var margin = {top: 50, right: 90, bottom: 140, left: 100},
+    width = 1000 - margin.left - margin.right,
+    height = 700 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+		 
+		 d3.select("header")
+		 .append("text", "Yup")
+
+//Read the data
+d3.csv("us-elections2.csv", function(data) {
+     
+
+  // Add X axis
+  var x = d3.scaleLinear()
+    .domain([0, 800000])
+    .range([ 0, width ]);
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x));
+
+  // Add Y axis
+  var y = d3.scaleLinear()
+    .domain([0, 750000])
+    .range([ height, 0]);
+  svg.append("g")
+    .call(d3.axisLeft(y));
+	
+
+  // Add dots
+  svg.append('g')
+    .selectAll("dot")
+    .data(data)
+    .enter()
+    .append("circle")
+      .attr("cx", function (d) { return x(d["total_votes_2016"]); } )
+      .attr("cy", function (d) { return y(d["total_votes_2012"]); } )
+      .attr("r", 2)
+	  .attr("fill", function(d) {
+                  if (d["party"] == "gop") {
+                      return 'red';
+                  } else if(d["party"] == "dem"){
+                      return 'blue';
+                  }
+				  else if(d["party"] == "other"){
+                      return 'green';
+					  }
+				 // else if (d["Continent"] == "North America"){
+				 //     return 'green';
+				//  }
+				  
+              });
+			  //
+			  //var legend = svg.append("g")
+          //    .attr("class", "legend")
+            //  .attr("transform", "translate(" + (width - 40) + "," + 20 + ")")
+              //.selectAll("g")
+              //.data(["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", " Florida ", "Georgia ", "Hawaii ", "Idaho ", "Illinois ", "Indiana ", "Iowa ","Kansas ","Kentucky ","Louisiana","Maine ","Maryland ","Massachusetts ","Michigan ","Minnesota ", "Mississippi ", "Missouri ", "Montana ", " Nebraska", "Nevada", "New Hampshire","New Jersey ","New Mexico","New York ","North Carolina "," North Dakota","Ohio"," Oklahoma"," Oregon","Pennsylvania ","Rhode Island", "South Carolina "," South Dakota","Tennessee ","Texas ", "Utah ","Vermont","Virginia ","Washington ","West Virginia ","Wisconsin ","Wyoming"])
+              //.enter().append("g");
+
+        var legend = svg.append("g")
+              .attr("class", "legend")
+              .attr("transform", "translate(" + (width - 40) + "," + 20 + ")")
+              .selectAll("g")
+              .data(["dem", "gop", "other"])
+              .enter().append("g");
+			  
+			   svg.append("text")      // text label for the x axis
+        .attr("x", 400 )
+        .attr("y", 550 )
+        .style("text-anchor", "middle")
+        .text("Total Votes 2016");
+			  
+	     svg.append("text")      // text label for the x axis
+        .attr("x", 50 )
+        .attr("y", -15 )
+        .style("text-anchor", "middle")
+        .text("Total Votes 2012");
+			  
+			  svg.append("text")      // text label for the x axis
+        .attr("x",400 )
+        .attr("y", 0 )
+        .style("text-anchor", "middle")
+        .text("US Elections 2012 - 2016");
+			  
+
+          legend.append("circle")
+              .attr("cy", function(d, i) {
+                  return i * 30;
+              })
+              .attr("r", function(d) {
+                  return 4.5;
+              })
+              .attr("fill", function(d) {
+                  if (d == "gop") {
+                      return 'red';
+                  } else if(d == "dem"){
+                      return 'blue';
+                  }
+				  else if(d == "other"){
+                      return 'green';
+					  }
+				  
+              });
+
+             legend.append("text")
+              .attr("y", function(d, i) {
+                  return i * 30 + 5;
+              })
+              .attr("x", 4.5 * 5)
+              .text(function(d) {
+                  return d;
+              });
+
+})
+
+</script>
