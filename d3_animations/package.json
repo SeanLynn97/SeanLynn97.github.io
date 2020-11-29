@@ -1,0 +1,14 @@
+{
+  "name": "election 2016",
+  "main": "elections16.js",
+  "version": "1359.0.0",
+  "homepage": "",
+  "author": {
+    "name": "KDO",
+    "url": ""
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
