@@ -1,7 +1,10 @@
-# SeanLynn97.github.io
+# SD4 Data Visualisation Project
 Sean D3 Project
 
-US Elections 2016 Result 
+I chose to do my visualisations on the US Elections, mostly on the last election in 2016,
+between Donald Trump and Hilary Clinton. 
+
+Using the dataset I had I created a d3 map and animation based on the state and county results in 2016.
 
 <div class="container">
   <h3>US Elections 2016 Result</h3>
