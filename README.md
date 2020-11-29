@@ -11,5 +11,6 @@ US Elections 2016 Result
     <li><a href="d3_animations/index.html">US Election 2016 d3 Animation Map </a></li>
 	  <li><a href="d3_scatter/index.html">US Election Scatter Plot 2016 - 2012</a></li>
 	  <li><a href="d3_dimple/index.html">US Election using d3 Dimple.js </a></li>
+	  <li><a href="https://github.com/SeanLynn97/SeanLynn97.github.io/raw/main/powerbi/US%20Elections.pbix">PowerBi Download Link</a></li>
    </ul>
  </div>
