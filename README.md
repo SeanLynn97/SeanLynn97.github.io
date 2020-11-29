@@ -9,7 +9,7 @@ US Elections 2016 Result
   <ul class="nav nav-tabs">
     <li class="active"><a href="d3_map/mapPlot.html">Us Eletion 2016 Results By County Map </a></li>
     <li><a href="d3_animations/index.html">US Election 2016 d3 Animation Map </a></li>
-	  <li><a href="d3_scatter">US Election Scatter Plot 2016 - 2012</a></li>
-	  <li><a href="d3_dimple">US Election using d3 Dimple.js </a></li>
+	  <li><a href="d3_scatter/D3-lab-ScatterPlot.html">US Election Scatter Plot 2016 - 2012</a></li>
+	  <li><a href="d3_dimple/basic_dimple_us_election_chart.html">US Election using d3 Dimple.js </a></li>
    </ul>
  </div>
