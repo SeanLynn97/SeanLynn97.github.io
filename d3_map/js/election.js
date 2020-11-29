@@ -17,7 +17,7 @@ function show() {
         .attr("class", "title")
         .attr("transform", "translate(" + (width/2)  + ")")
         .attr("text-anchor", "middle")
-        .text("US Elections 2016 - Results by County (Select below for breakdown")
+        .text("Results by County - Select below for breakdown")
 
     var projection = d3.geoAlbersUsa();
     var path = d3.geoPath()
