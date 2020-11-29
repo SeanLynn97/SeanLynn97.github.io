@@ -14,6 +14,7 @@ Using the dataset I had I created a d3 map and animation based on the state and 
   <ul class="nav nav-tabs">
     <li class="active"><a href="d3_map/mapPlot.html">Us Eletion 2016 Results By County Map </a></li>
     <li><a href="d3_animations/index.html">US Election 2016 d3 Animation Map </a></li>                                                                                                 <li><a href="https://github.com/SeanLynn97/SeanLynn97.github.io/raw/main/d3_scatter/ScatterSimplePlot-US%20Elections.zip">US Election Scatter Plot 2016 - 2012</a></li>
+    <li><a href="https://raw.githubusercontent.com/SeanLynn97/SeanLynn97.github.io/main/d3_scatter/scatterplot.png">Scatter Plot Image</a></li>
     <li><a href="https://github.com/SeanLynn97/SeanLynn97.github.io/raw/main/d3_dimple/Dimple_Lab-US-Elections16.rar">US Election using d3 Dimple.js </a></li>                         <li><a href="https://github.com/SeanLynn97/SeanLynn97.github.io/raw/main/powerbi/US%20Elections.pbix">PowerBi Download Link</a></li>
    </ul>
  </div>
