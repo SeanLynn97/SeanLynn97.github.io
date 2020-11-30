@@ -83,8 +83,8 @@ tweet("1178030815671980032")
   return svg.node();
 }
 );
-//main.variable(observer("spreadCounties")).define("spreadCounties", ["applySimulation","counties"], function(applySimulation,counties){return(
-//applySimulation(counties)
+main.variable(observer("spreadCounties")).define("spreadCounties", ["applySimulation","counties"], function(applySimulation,counties){return(
+applySimulation(counties)
 )});
   main.variable(observer("vote_map_population_spread_bubble")).define("vote_map_population_spread_bubble", ["width","d3","DOM","projection","spreadCounties"], function(width,d3,DOM,projection,spreadCounties)
 {
