@@ -311,7 +311,7 @@ d3.geoAlbersUsa()
 );
   main.variable(observer("us")).define("us", ["d3"], async function(d3)
 { 
-  const url = "https://gist.githubusercontent.com/jake-low/bd39a072eb4c0822d2c32473816e1c11/raw/5a3296a2049d6719d38b66d0b77c9359b81b8c4c/us-10m-unprojected.json";
+  const url = "us-10m-unprojected.json";
   const us = await d3.json(url);
   
   // Kalawao County (FIPS 15005) was incorporated into Maui County (FIPS 15009)
