@@ -83,7 +83,7 @@ tweet("1178030815671980032")
   return svg.node();
 }
 );
-main.variable(observer("spreadCounties")).define("spreadCounties", ["applySimulation","counties"], function(applySimulation,counties){return(
+  main.variable(observer("spreadCounties")).define("spreadCounties", ["applySimulation","counties"], function(applySimulation,counties){return(
 applySimulation(counties)
 )});
   main.variable(observer("vote_map_population_spread_bubble")).define("vote_map_population_spread_bubble", ["width","d3","DOM","projection","spreadCounties"], function(width,d3,DOM,projection,spreadCounties)
@@ -357,7 +357,7 @@ require("https://platform.twitter.com/widgets.js").catch(() => window.twttr)
 )});
   main.variable(observer("tweet")).define("tweet", ["twttr"], function(twttr){return(
 async function tweet(id, options) {
- const div = document.createElement("DIV");
+  const div = document.createElement("DIV");
   await twttr.widgets.createTweet(id, div, options);
   return div;
 }
