@@ -290,7 +290,7 @@ d3.geoAlbersUsa()
 );
   main.variable(observer("populations")).define("populations", ["d3"], async function(d3)
 {
-  const data = await d3.csv("https://gist.githubusercontent.com/jake-low/907af4cc717e4c289346c6b262d68a50/raw/4e9f4012d346ecff75aaeee751e7f1af3cd9c1d7/co-est2017-alldata.csv");
+  const data = await d3.csv("co-est2017-alldata.csv");
   
   let population = data
     .filter(row => row.COUNTY !== "000")
