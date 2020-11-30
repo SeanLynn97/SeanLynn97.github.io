@@ -352,14 +352,14 @@ require("topojson-client@3")
   main.variable(observer("d3")).define("d3", ["require"], function(require){return(
 require("d3@5")
 )});
-  main.variable(observer("twttr")).define("twttr", ["require"], function(require){return(
-require("https://platform.twitter.com/widgets.js").catch(() => window.twttr)
-)});
+  //main.variable(observer("twttr")).define("twttr", ["require"], function(require){return(
+//require("https://platform.twitter.com/widgets.js").catch(() => window.twttr)
+//)});
   main.variable(observer("tweet")).define("tweet", ["twttr"], function(twttr){return(
 async function tweet(id, options) {
-  const div = document.createElement("DIV");
-  await twttr.widgets.createTweet(id, div, options);
-  return div;
+ // const div = document.createElement("DIV");
+  //await twttr.widgets.createTweet(id, div, options);
+  //return div;
 }
 )});
   main.variable(observer("turf")).define("turf", ["require"], function(require){return(
