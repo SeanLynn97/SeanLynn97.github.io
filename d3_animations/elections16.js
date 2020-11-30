@@ -327,7 +327,7 @@ d3.geoAlbersUsa()
   // FIPS prefixes 01xxx (Alabama) through 56xxx (Wyoming) are states; larger values are territories.
   counties.geometries = counties.geometries.filter(county => +county.id < 57000);
   
-  const state_fips_codes = await d3.tsv("https://gist.githubusercontent.com/jake-low/f9857e7b5c9a30000dc87cfaf9330ab5/raw/4471d6bbbfb098f27fae5dfc8d9b4ada10dc58e3/state_fips_table.tsv");
+  const state_fips_codes = await d3.tsv("state_fips_table.tsv");
   
   const states = us.objects.states;
   
