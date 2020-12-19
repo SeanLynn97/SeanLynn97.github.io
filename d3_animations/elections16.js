@@ -85,7 +85,7 @@ tweet("1178030815671980032")
 );
   main.variable(observer("spreadCounties")).define("spreadCounties", ["applySimulation","counties"], function(applySimulation,counties){return(
 applySimulation(counties)
-)});
+});
   main.variable(observer("vote_map_population_spread_bubble")).define("vote_map_population_spread_bubble", ["width","d3","DOM","projection","spreadCounties"], function(width,d3,DOM,projection,spreadCounties)
 {
   const height = width * 5/8;
@@ -290,7 +290,7 @@ d3.geoAlbersUsa()
 );
   main.variable(observer("populations")).define("populations", ["d3"], async function(d3)
 {
-  const data = await d3.csv("https://gist.githubusercontent.com/jake-low/907af4cc717e4c289346c6b262d68a50/raw/4e9f4012d346ecff75aaeee751e7f1af3cd9c1d7/co-est2017-alldata.csv");
+  const data = await d3.csv("co-est2017-alldata.csv");
   
   let population = data
     .filter(row => row.COUNTY !== "000")
@@ -311,7 +311,7 @@ d3.geoAlbersUsa()
 );
   main.variable(observer("us")).define("us", ["d3"], async function(d3)
 { 
-  const url = "https://gist.githubusercontent.com/jake-low/bd39a072eb4c0822d2c32473816e1c11/raw/5a3296a2049d6719d38b66d0b77c9359b81b8c4c/us-10m-unprojected.json";
+  const url = "us-10m-unprojected.json";
   const us = await d3.json(url);
   
   // Kalawao County (FIPS 15005) was incorporated into Maui County (FIPS 15009)
@@ -327,7 +327,7 @@ d3.geoAlbersUsa()
   // FIPS prefixes 01xxx (Alabama) through 56xxx (Wyoming) are states; larger values are territories.
   counties.geometries = counties.geometries.filter(county => +county.id < 57000);
   
-  const state_fips_codes = await d3.tsv("https://gist.githubusercontent.com/jake-low/f9857e7b5c9a30000dc87cfaf9330ab5/raw/4471d6bbbfb098f27fae5dfc8d9b4ada10dc58e3/state_fips_table.tsv");
+  const state_fips_codes = await d3.tsv("state_fips_table.tsv");
   
   const states = us.objects.states;
   
