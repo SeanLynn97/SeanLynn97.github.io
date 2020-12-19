@@ -1,4 +1,6 @@
 # SD4 Data Visualisation Project
+
+  --viewable on github --- https://seanlynn97.github.io/
 Sean Lynn D3 Project
 
 I chose to do my visualisations on the US Elections, mostly on the last election in 2016,
